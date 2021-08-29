@@ -1,4 +1,33 @@
-# Getting Started with Create React App
+# About This Project
+
+This is a solution to the 25+5 Clock challenge by Freecodecamp.
+
+### The challenge
+
+Users should be able to:
+
+-   View the optimal layout for the app depending on their device's screen size
+
+-   Update the session length and break length.
+
+-   Run the Timer.
+
+-   Get alarm sound when time is up.
+
+### Links
+
+-   Solution URL: [Github](https://github.com/adram3l3ch/Weather-App)
+-   Live Site URL: [Netlify](https://adramelech-weather-app.netlify.app/)
+
+### Built with
+
+-   Semantic HTML5 markup
+-   CSS custom properties
+-   Flexbox
+-   Mobile-first workflow
+-   [React](https://reactjs.org/) - JS library
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
