@@ -13,13 +13,13 @@ const ContextProvider = ({ children }) => {
 		if (isBreak) {
 			setCountdown((val) => ({ m: breakLength, s: 0 }));
 		}
-	}, [breakLength]);
+	}, [breakLength, isBreak]);
 
 	useEffect(() => {
 		if (!isBreak) {
 			setCountdown((val) => ({ m: session, s: 0 }));
 		}
-	}, [session]);
+	}, [session, isBreak]);
 
 	return (
 		<AppContext.Provider
