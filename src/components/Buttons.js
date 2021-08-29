@@ -4,20 +4,18 @@ import { FaPlayCircle, FaPauseCircle } from "react-icons/fa";
 
 import { BiReset } from "react-icons/bi";
 
+let interval;
 const Buttons = () => {
 	const {
 		paused,
 		setPaused,
 		setCountdown,
-		countdown,
 		breakLength,
 		isBreak,
 		setIsBreak,
 		setBreakLength,
 		setSession,
-		setCoundown,
 		session,
-		interval,
 	} = useGlobalContext();
 
 	const updateCountdown = () => {

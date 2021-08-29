@@ -8,7 +8,6 @@ const ContextProvider = ({ children }) => {
 	const [session, setSession] = useState(25);
 	const [countdown, setCountdown] = useState({ m: 25, s: 0 });
 	const [paused, setPaused] = useState(true);
-	let interval;
 
 	useEffect(() => {
 		if (isBreak) {
@@ -34,7 +33,6 @@ const ContextProvider = ({ children }) => {
 				countdown,
 				setCountdown,
 				paused,
-				interval,
 				setPaused,
 			}}
 		>

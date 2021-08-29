@@ -1,13 +1,169 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Ubuntu:wght@300;400;500&display=swap");
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h2 {
+	font-weight: 400;
+	margin-bottom: 20px;
+	font-size: 1.3rem;
+}
+
+h1 {
+	font-size: 2.5rem;
+}
+
+#root {
+	font-family: "Ubuntu", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	height: 100vh;
+	min-height: 700px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #212428;
+	color: white;
+}
+
+.clock {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.clock > * {
+	margin-bottom: 40px;
+}
+
+.length {
+	display: flex;
+	width: 200px;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 1.5rem;
+	background-image: linear-gradient(45deg, 2a4cf7 20%, #2575fc 100%);
+	box-shadow: -2px -2px 10px -1px rgba(81, 89, 99, 60%),
+		5px 5px 10px -2px rgba(0, 0, 0, 80%);
+	padding: 10px 30px;
+	border-radius: 50px;
+}
+
+#session-label,
+#break-label {
+	width: max-content;
+}
+
+.lengths {
+	display: flex;
+	width: 450px;
+	justify-content: space-between;
+	text-align: center;
+}
+
+.timer {
+	border: 10px solid #b9d0e5;
+	box-shadow: 5px 5px 5px black, 0 0 100px 5px rgba(125, 140, 155, 50%);
+	border-radius: 50%;
+	width: 300px;
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+
+.buttons {
+	display: flex;
+	width: 50%;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+#start_stop {
+	font-size: 3rem;
+	cursor: pointer;
+}
+
+#reset {
+	box-sizing: initial;
+	font-size: 2.5rem;
+	color: #212428;
+	padding: 3.7px;
+	background: white;
+	border-radius: 50%;
+	transform: translateY(1px);
+	cursor: pointer;
+}
+
+#timer-label {
+	font-size: 2rem;
+	font-weight: 400;
+}
+
+#time-left {
+	font-family: "Bebas Neue", cursive;
+	font-size: 6rem;
+}
+
+#session-decrement,
+#break-decrement,
+#session-increment,
+#break-increment {
+	transition: all 0.2s linear;
+	cursor: pointer;
+}
+
+#session-decrement:hover,
+#break-decrement:hover {
+	transform: translateY(2px);
+}
+
+#session-increment:hover,
+#break-increment:hover {
+	transform: translateY(-2px);
+}
+
+.active#time-left {
+	animation: notime 1s infinite;
+	color: red;
+}
+
+button {
+	border: none;
+	outline: none;
+	background: none;
+	color: white;
+	font-size: inherit;
+}
+
+@keyframes notime {
+	50% {
+		font-size: 7rem;
+	}
+}
+
+@media (max-width: 450px) {
+	#root {
+		min-height: 850px;
+	}
+
+	.lengths {
+		flex-direction: column;
+		align-items: center;
+		width: max-content;
+	}
+
+	.lengths > * {
+		margin-bottom: 20px;
+	}
 }
